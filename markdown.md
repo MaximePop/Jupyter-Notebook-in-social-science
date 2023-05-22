@@ -1,18 +1,23 @@
 ---
-title: Quels usages pour les Jupyter Notebooks en Sciences Sociales ?
-subject: Inconvénients, avantages et bonnes pratiques pour les Jupyter Notebooks.
-subtitle: Petit panorama d'un outil en pleine expansion à destination des acteurs de l'Enseignement Supérieur et de la Recherche en Sciences Humaines et sociales.
+title: "Quels usages pour les Jupyter Notebooks en Sciences Sociales ?"
+subject: "Inconvénients, avantages et bonnes pratiques pour les Jupyter Notebooks."
+subtitle: "Petit panorama d'un outil en pleine expansion à destination des acteurs de l'Enseignement Supérieur et de la Recherche en Sciences Humaines et sociales."
 authors:
   - name: "POPINEAU Maxime"
     affiliations: "Digit_Hum"
-    email: maxime.popineau@etu.univ-tours.fr
+    email: "maxime.popineau@etu.univ-tours.fr"
 licence: CC-BY-4.0
 keywords: Jupyter Notebooks, SHS
-date: 23-05-2023
+date: "2023-05-23"
 venue:
-title: Jupyter Notebook in social science
-url: https://github.com/MaximePop/Jupyter-Notebook-in-social-science
+  title: Jupyter Notebook dans les sciences humaines
+  url: "https://github.com/MaximePop/Jupyter-Notebook-in-social-science"
+
 ---
+
+**Auteurs:** POPINEAU Maxime<sup> \
+**Projet:** <sup>Digit_Hum<sup>
+**License:** CC-BY-4.0
 
 +++ {"part": "abstract"}
 
@@ -22,9 +27,8 @@ En 2014, le chercheur en physique Fernando Pérez, annonce un projet issu de son
 
 +++
 
-## Background
 
-Introduction :
+### Introduction :
 
 
 Un Jupyter Notebook est un document manipulable dans le navigateur internet composé de plusieurs cellules, combinant à la fois du code, du texte et des visualisations graphiques, le code pouvant être modifié et exécuté interactivement.  Venu de la communauté Python, intégrant R[^1] ou Julia[^2], les Jupyter Notebooks supportent plus de 40 langages de programmation. Les Jupyter Notebooks et notamment le langage informatique Python[^3] commencent à être très utilisés dans de nombreux domaines scientifiques mais encore peu en SHS.
@@ -164,19 +168,19 @@ Le site Stack Overflow est un forum dédié à la communauté des développeurs 
 [^5]: https://github.com/quinnanya/litlab\_translations/blob/master/litlab\_translations\_2019-04-15\_jupyter\_notebook.ipynb
 [^6]: https://gitlab.huma-num.fr/io/mobilites-professionnelles-final/-/blob/main/notebooks/Mobilit%C3%A9s%20professionnelles.ipynb
 [^7]:Les Ipywidgets permettent l’interactivité du Notebook. L’utilisateur peut avoir une barre par exemple pour changer les valeurs et ensuite obtenir les résultats qui sont modifiés et retournés par l’algorithme. Les Ipywidgets sont très utilisés dans le cadre de l’enseignement et ils permettent aussi à des personnes qui ne savent pas programmer d’interagir avec le Notebook. 
-[^8]: 
-[^9]: 
-[^10]: 
-[^11]: 
-[^12]: 
-[^13]: 
-[^14]: 
-[^15]: 
-[^16]: 
-[^17]: 
-[^18]: 
-[^19]: 
-[^20]: 
-[^21]: 
-[^22]: 
+[^8]: Github est une plateforme de collaboration qui permet d’héberger au format open-source des projets informatiques comportant du code. Les utilisateurs ont accès à des millions et des millions de fichiers python ou des Jupyter Notebooks sur des sujets très variés et dans des disciplines différentes. Ce service propose aussi des fonctionnalités recherchées par les programmeurs : l’intégration continue, la gestion de versions …
+[^9]: Nbviewer est disponible à cette adresse : https://nbviewer.org/. Cette solution est utilisée pour partager de manière facile les Jupyter Notebooks sans passer par l’installation de logiciels tiers. Le notebook est disponible sous forme de page HTML statique. Il est possible d’utiliser le Notebook au format HTML dans un site web en copiant/collant l’URL dans le code. Un tutoriel est disponible pour apprendre à utiliser nbviewer ici : https://www.tutorialspoint.com/jupyter/sharing_jupyter_notebook_using_github_and_nbviewer.htm
+[^10]: Binder est une extension permettant de réexécuter le code et de supprimer ou d’ajouter des cellules. Cette extension permet de rendre le Notebook interactif au contraire de nbviewer qui donne une version du Notebook statique.
+[^11]: La communauté Jupyter propose beaucoup d’ateliers sur des thématiques précises par exemple : un atelier Jupyter s’est tenu en décembre 2022 à Paris sur le sujet du projet JupyterLite qui permet d’avoir un Jupyter Notebook qui tourne dans le navigateur web sans avoir à faire d’autres installations.
+[^12]: Les JupyterDas sont comme le nom l’indique une conférence d’un jour sur le sujet des Jupyter Notebooks
+[^13]: La JupyterCon est la conférence qui regroupe tous les utilisateurs des Jupyter Notebooks. L’évènement dure pendant plusieurs jours et comporte des conférences, des tables-rondes et aussi des cours. La JupyterCon permet de renforcer la communauté et d’avoir des interactions en personne pour des utilisateurs qui collabore à distance durant le reste de l’année.
+[^14]: Un IDE (environnement de développement intégré) est un ensemble d’outils qui permet d’augmenter la productivité des programmeurs qui créent des logiciels. Un IDE comporte un éditeur de texte permettant de faire de la programmation.  Les exemples d’IDE sont nombreux : Visual Studio Code, CodeLite, NetBeans, PytCharm.
+[^15]: Un test est un morceau du code qui permet de vérifier que le code fonctionne comme attendu et qu’il ne produit pas de bugs.
+[^16]: Un Linter est un outil d’analyse de code qui permet de détecter les erreurs et les problèmes de syntaxe
+[^17]: Le « debugging » est une pratique qui consiste à trouver et à corriger les erreurs dans le code. Les programmeurs étudient le code pour déterminer la raison des erreurs. Le but est d’exécuter le code et de le vérifier étapes par étapes pour résoudre le problème. Les tests aident pour le « debugging ».
+[^18]: « Cloud based » signifie que les données ne sont pas sur un serveur local ou sur un ordinateur personnel mais que les données sont stockées sur des serveurs informatiques à distance puis ensuite hébergés sur internet.
+[^19]: Le « versioning » permet d’avoir la version des librairies utilisées ce qui est utile pour pouvoir reproduire le Notebook. Certaines fonctionnalités ne sont que disponibles qu’avec une version spécifique de la librairie.
+[^20]: Apache Zepellin est un projet similaire aux Jupyter Notebooks. Apache Zepellin est un projet permettant d’analyser et de mettre en forme, de manière visuelle et interactive, de gros volumes de données traités via le framework de calcul distribué Spark. (source : https://fr.wikipedia.org/wiki/Apache_Zeppelin)
+[^21]: BeakerX est une extension open source du projet Jupyter Notebook visant à améliorer la visualisation graphique et l’interactivité des Notebooks.
+[^22]: DeepNote est un Notebook collaboratif qui cherche donc à rendre la collaboration entre plusieurs utilisateurs plus facile.
 [^23]: Rule, A., Birmingham, A., Zuniga, C., Altintas, I., Huang, S.-C., Knight, R., … Rose, P. W. (2019). Ten simple rules for writing and sharing computational analyses in Jupyter Notebooks. PLOS Computational Biology, 15(7), e1007007. doi:10.1371/journal.pcbi.1007007

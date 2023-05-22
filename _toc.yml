@@ -1,6 +1,6 @@
 # In _toc.yml
-format: jb-article
-root: index
-sections:
+format: jb-book
+root: intro
+chapters:
 - file: markdown
 - file: markdown-notebooks

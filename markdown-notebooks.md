@@ -1,13 +1,13 @@
 ---
 title: "Un panorama des pratiques informatiques dans les publications de recherche dans la base de données HAL."
-subject: "Découverte de librairies et utilisation d'une API."
+subject: "Découverte de librairies et API."
 subtitle: "Un exemple des bonnes pratiques à mettre en place pour constituer un Notebook."
 authors:
   - name: "POPINEAU Maxime"
     affiliations: "Digit_Hum"
     email: "maxime.popineau@etu.univ-tours.fr"
-licence: "CC-BY-4.0"
 keywords: "Jupyter Notebooks, API, tutoriel"
+
 ---
 
 ## <span style="font-size: 14pt"> Information sur les données.</span>

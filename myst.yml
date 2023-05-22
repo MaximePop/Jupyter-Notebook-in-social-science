@@ -1,17 +1,15 @@
 # See docs at: https://myst-tools.org/docs/mystjs/frontmatter
 version: 1
 project:
-  title: Geocomputing
+  title: Les Jupyter Notebooks en Sciences Humaines et Sociales
   thebe: true
+  binder: "https://mybinder.org/v2/gh/MaximePop/testJupyter/HEAD"
   # description:
   keywords: []
   authors: []
-  # github:
-  # bibliography: []
 site:
   template: book-theme
-  title: My Computational Website.
-  # logo:
+  title: Bienvenue sur mon site sur les Jupyter Notebooks
   projects:
     - slug: myst
       path: .
