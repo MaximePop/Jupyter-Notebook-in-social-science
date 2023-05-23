@@ -1,34 +1,36 @@
 ---
 title: "Quels usages pour les Jupyter Notebooks en Sciences Sociales ?"
-subject: "Inconvénients, avantages et bonnes pratiques pour les Jupyter Notebooks."
+subject: "Les Jupyter Notebooks en SHS"
 subtitle: "Petit panorama d'un outil en pleine expansion à destination des acteurs de l'Enseignement Supérieur et de la Recherche en Sciences Humaines et sociales."
 authors:
   - name: "POPINEAU Maxime"
     affiliations: "Digit_Hum"
     email: "maxime.popineau@etu.univ-tours.fr"
-licence: CC-BY-4.0
+license: CC-BY-4.0
 keywords: Jupyter Notebooks, SHS
 date: "2023-05-23"
 venue:
-  title: Jupyter Notebook dans les sciences humaines
+  title: Lien vers le répertoire Github
   url: "https://github.com/MaximePop/Jupyter-Notebook-in-social-science"
+exports:
+  - format: pdf
+    template: arxiv_two_column
+    output: exports/my-document.pdf
 
 ---
-
-**Auteurs:** POPINEAU Maxime<sup> \
-**Projet:** <sup>Digit_Hum<sup>
-**License:** CC-BY-4.0
+| ![Aspose.Words](Aspose.Words.e94bf946-1998-46ad-bdc9-19bd330baa79.001.png) | ![digit_hum.png](digit_hum.png) | ![logo.png](logo.png) |
+|:------------------|:------------------:|--------------------:|
 
 +++ {"part": "abstract"}
 
 En 2014, le chercheur en physique Fernando Pérez, annonce un projet issu de son environnement interactif iPython facilitant la programmation pour les scientifiques : le projet Jupyter. Ce dernier se développe autour d’un écosystème de logiciels interactifs pour la programmation comme : le Jupyter Hub, le JupyterLab ou le Jupyter Notebook. Notre papier porte sur le rôle des Jupter Notebooks dans les sciences humaines et sociales.
 
-![](Aspose.Words.e94bf946-1998-46ad-bdc9-19bd330baa79.001.png)![](Aspose.Words.e94bf946-1998-46ad-bdc9-19bd330baa79.002.png)
-
 +++
 
 
-### Introduction :
+## **1. Introduction**
+
+
 
 
 Un Jupyter Notebook est un document manipulable dans le navigateur internet composé de plusieurs cellules, combinant à la fois du code, du texte et des visualisations graphiques, le code pouvant être modifié et exécuté interactivement.  Venu de la communauté Python, intégrant R[^1] ou Julia[^2], les Jupyter Notebooks supportent plus de 40 langages de programmation. Les Jupyter Notebooks et notamment le langage informatique Python[^3] commencent à être très utilisés dans de nombreux domaines scientifiques mais encore peu en SHS.
@@ -49,32 +51,98 @@ Pour donner quelques exemples, les Jupyter Notebooks peuvent être utilisé dans
 
 Face à la diversité des usages se pose la question de la stabilisation des bonnes pratiques et de faciliter l’adoption de cet outil pour les nouveaux arrivants. Nous allons tenter de répondre à cette question en faisant un tableau synthèse issu de la littérature scientifique qui commence à exister sur les avantages et inconvénients des Jupyter Notebooks.
 
-**Avantages :**
+## **2. Avantages**
 
-|Création d'un standard|<p>- Utilisation dans toutes les branches des sciences sociales et dans des domaines différents.</p><p>- 100% open source.</p><p>- 40 langages de programmation</p><p>- Utilisation possible sur tous types de navigateurs et tous OS (Windows, Linux, Mac).</p><p>- Homogénéise les données créées </p><p>- Rend les données interopérables entre les chercheurs.</p>|
-| :- | :- |
-|Rend l'enseignement + interactif et facile|<p>- Combination du code, du texte et des visualisations graphiques dans un document.</p><p>- Favorise l’engagement des étudiants car ils peuvent interagir avec le Notebook en faisant des exercices.</p><p>- Favorise la narration.</p><p>- Mettre en place des cellules pour clarifier les différentes étapes.</p>><p>- Possiiblité pour les utilisateurs de changer les résultats grâces aux ipy widgets[^7] .</p>|
-|Travail réutilisable|<p>- Faciliter d’accès à son travail et pouvoir le partager.</p><p>- Conversion dans d'autres formats.</p><p>Github est une plateforme de collaboration qui permet d’héberger au format open-source des projets informatiques comportant du code. Les utilisateurs ont accès à des millions et des millions de fichiers python ou des Jupyter Notebooks sur des sujets très variés et dans des disciplines différentes. Ce service propose aussi des fonctionnalités recherchées par les programmeurs : l’intégration continue, la gestion de versions …</p><p>- Très facile d’utiliser l’outil Github[^8] pour présenter ses recherches.</p><p>- Permet à d’autres chercheurs de modifier le code pour obtenir d’autres résultats.</p><p>- Permet aux étudiants d'envoyer leurs travaux en programmation à leur professeur.</p><p>- Utile pour la publication d'articles.</p><p></p>|
-|Facilite les échanges entre chercheurs en SHS|<p>- Permet à la fois de partager du texte et code dans le même document. Utile pour la publication d’articles.</p><p>- Pas de but fixé par le logiciel : l'utilisateur réfléchit aux résultats qu'il veut obtenir.</p><p>- ` `Permet d’expliquer clairement son domaine de recherche à d’autres chercheurs lors d’une conférence.</p><p>- Permet le travail collaboratif entre différents chercheurs à partir d'un même outil.		 </p><p>	</p>|
-|Mise en place d’un écosystème d’extensions et d’évènements.|<p>- Traduction possible dans d’autres formats : livres, slides.</p><p>Nbviewer est disponible à cette adresse : <https://nbviewer.org/>. Cette solution est utilisée pour partager de manière facile les Jupyter Notebooks sans passer par l’installation de logiciels tiers. Le notebook est disponible sous forme de page HTML statique. Il est possible d’utiliser le Notebook au format HTML dans un site web en copiant/collant l’URL dans le code. Un tutoriel est disponible pour apprendre à utiliser nbviewer ici : https://www.tutorialspoint.com/jupyter/sharing\_jupyter\_notebook\_using\_github\_and\_nbviewer.htm</p><p>Binder est une extension permettant de réexécuter le code et de supprimer ou d’ajouter des cellules. Cette extension permet de rendre le Notebook interactif au contraire de nbviewer qui donne une version du Notebook statique.</p><p>- Partage simple d’un Notebook via Nbviewer[^9] et Binder[^10] permettent de visualiser le Notebook.</p><p>- Communauté d’utilisateurs comme dans la recherche qui construit des extensions, des applications et qui aident les nouveaux utilisateurs. </p><p>La communauté Jupyter propose beaucoup d’ateliers sur des thématiques précises par exemple : un atelier Jupyter s’est tenu en décembre 2022 à Paris sur le sujet du projet JupyterLite qui permet d’avoir un Jupyter Notebook qui tourne dans le navigateur web sans avoir à faire d’autres installations.</p><p>Les JupyterDas sont comme le nom l’indique une conférence d’un jour sur le sujet des Jupyter Notebooks.</p><p>La JupyterCon est la conférence qui regroupe tous les utilisateurs des Jupyter Notebooks. L’évènement dure pendant plusieurs jours et comporte des conférences, des tables-rondes et aussi des cours. La JupyterCon permet de renforcer la communauté et d’avoir des interactions en personne pour des utilisateurs qui collabore à distance durant le reste de l’année.</p><p>- Mis en place d’évènements communs (Jupyter Community Workshops[^11], JupyterDays[^12] et JupyterCon[^13]).</p><p></p>|
+| Création d'un standard |
+| :- |
+- Utilisation dans toutes les branches des sciences sociales et dans des domaines différents.
+- 100% open source.
+- 40 langages de programmation.
+- Utilisation possible sur tous types de navigateurs et tous OS (Windows, Linux, Mac).
+- Homogénéise les données créées.
+- Rend les données interopérables entre les chercheurs. 
 
-**Inconvénients :**
+| Rend l'enseignement + interactif et facile |
+| :- |
+- Combination du code, du texte et des visualisations graphiques dans un document.
+- Favorise l’engagement des étudiants car ils peuvent interagir avec le Notebook en faisant des exercices.
+- Favorise la narration.
+- Mettre en place des cellules pour clarifier les différentes étapes.
+- Possibilité pour les utilisateurs de changer les résultats grâce aux ipy widgets[^7]. 
 
-|Nécessite des connaissances de base.|<p>- Nécessite de connaître un langage informatique (Python ou autre).</p><p>- Une philosophie qui n’est pas nécessairement intuitive dans l’exécution du code.</p><p>Un IDE (environnement de développement intégré) est un ensemble d’outils qui permet d’augmenter la productivité des programmeurs qui créent des logiciels. Un IDE comporte un éditeur de texte permettant de faire de la programmation.  Les exemples d’IDE sont nombreux : Visual Studio Code, CodeLite, NetBeans, PytCharm.</p><p>- Moins de support que les IDE[^14]. Par exemple : le Notebook ne dit pas s’il y a une variable non-utilisée.</p><p>- Face à cet outil très customisable : difficulté de savoir quels plugins ou extensions à exploiter.</p>|
-| :- | :- |
-|Problème de reproductibilité|<p>- Les Notebooks sont particulièrement compliqués à reproduire pour les débutants car ils nécessitent de réécrire le code (sur 1 million de Notebooks sur Github seulement 4% sont utilisables en état).</p><p>- Impossibilité de reproduire le Notebook dans certains cas : le code peut être obsolète. Il faut aussi retrouver la bonne version des librairies utilisées.</p><p>- Le code peut être exécuté de manière non linéaire, provoquant des « hidden states ».</p><p>- Lien entre les données et le Notebook pas évident : l’accès aux fichiers est une des causes communes au fait que les Notebooks ne soient pas reproductibles. Il faut changer le path du fichier directement dans le code du Notebook.</p>|
-|Outil qui conduit à prendre de mauvaises habitudes pour écrire du code|<p>- Compliqué de passer de Visual Studio Code à Jupyter Notebook pour un débutant.</p><p>Un test est un morceau du code qui permet de vérifier que le code fonctionne comme attendu et qu’il ne produit pas de bugs.</p><p>- Faible pratique des tests[^15] : il est compliqué de faire des tests pour un Jupyter Notebook.</p><p>- Favorise des pratiques discutables dans le nom des fichiers et dans la version et la modularisation du code.</p><p>- Pas de règles homogènes sur l’écriture des notebooks. Par exemple : moins de commentaires à la fin des Notebooks : la plupart des Notebooks ont une cellule d’introduction mais presque aucun a de cellules de conclusions.</p>|
-|Une diversité de solutions concurrentes de carnets interactifs ne facilitant pas le choix.|<p>Un Linter est un outil d’analyse de code qui permet de détecter les erreurs et les problèmes de syntaxe.</p><p>Le « debugging » est une pratique qui consiste à trouver et à corriger les erreurs dans le code. Les programmeurs étudient le code pour déterminer la raison des erreurs. Le but est d’exécuter le code et de le vérifier étapes par étapes pour résoudre le problème. Les tests aident pour le « debugging ».</p><p>- Les différents IDE (PyCharm, Spyder, Visual Studio Code) permettent de contrôler le code avec des linters[^16],de faire du contrôle de version ainsi que faire du debugging[^17].</p><p>« Cloud based » signifie que les données ne sont pas sur un serveur local ou sur un ordinateur personnel mais que les données sont stockées sur des serveurs informatiques à distance puis ensuite hébergés sur internet.</p><p>Le « versioning » permet d’avoir la version des librairies utilisées ce qui est utile pour pouvoir reproduire le Notebook. Certaines fonctionnalités ne sont que disponibles qu’avec une version spécifique de la librairie.</p><p>- Les outils « cloud based »[^18] comme Google Collab et Azure Notebook permettent de collaborer avec d’autres utilisateurs et de contrôler la version[^19].</p><p>Apache Zepellin est un projet similaire aux Jupyter Notebooks. Apache Zepellin est un projet permettant d’analyser et de mettre en forme, de manière visuelle et interactive, de gros volumes de données traités via le framework de calcul distribué Spark. (source : <https://fr.wikipedia.org/wiki/Apache_Zeppelin>)</p><p>BeakerX est une extension open source du projet Jupyter Notebook visant à améliorer la visualisation graphique et l’interactivité des Notebooks.</p><p>- Diversité de formats similaires et difficulté pour choisir : des Notebooks interactifs comme Apache Zeppelln[^20] ou BeakerX[^21].</p><p>DeepNote est un Notebook collaboratif qui cherche donc à rendre la collaboration entre plusieurs utilisateurs plus facile.</p><p>- Deepnote[^22] permet de collaborer dans le même notebook alors que dans les Jupyter Notebooks sont stockés en local dans un ordinateur. Deepnote prend en charge le management des versions et permet de mettre en place des permissions différentes en fonction des utilisateurs du Notebook.</p>|
+| Travail réutilisable |
+| :- |
+- Facilité d’accès à son travail et pouvoir le partager.
+- Conversion dans d'autres formats.
+- Github est une plateforme de collaboration qui permet d’héberger au format open-source des projets informatiques comportant du code. Les utilisateurs ont accès à des millions et des millions de fichiers python ou des Jupyter Notebooks sur des sujets très variés et dans des disciplines différentes. Ce service propose aussi des fonctionnalités recherchées par les programmeurs : l’intégration continue, la gestion de versions...
+- Très facile d’utiliser l’outil Github[^8] pour présenter ses recherches.
+- Permet à d’autres chercheurs de modifier le code pour obtenir d’autres résultats.
+- Permet aux étudiants d'envoyer leurs travaux en programmation à leur professeur.
+- Utile pour la publication d'articles.
+
+| Facilite les échanges entre chercheurs en SHS |
+| :- |
+- Permet à la fois de partager du texte et du code dans le même document. Utile pour la publication d’articles.
+- Pas de but fixé par le logiciel : l'utilisateur réfléchit aux résultats qu'il veut obtenir.
+- Permet d’expliquer clairement son domaine de recherche à d’autres chercheurs lors d’une conférence.
+- Permet le travail collaboratif entre différents chercheurs à partir d'un même outil. 
+
+| Mise en place d’un écosystème d’extensions et d’évènements |
+| :- |
+- Traduction possible dans d’autres formats : livres, slides.
+- Nbviewer est disponible à cette adresse : <https://nbviewer.org/>. Cette solution est utilisée pour partager de manière facile les Jupyter Notebooks sans passer par l’installation de logiciels tiers. Le notebook est disponible sous forme de page HTML statique. Il est possible d’utiliser le Notebook au format HTML dans un site web en copiant/collant l’URL dans le code. Un tutoriel est disponible pour apprendre à utiliser nbviewer ici : <https://www.tutorialspoint.com/jupyter/sharing_jupyter_notebook_using_github_and_nbviewer.htm>.
+- Partage simple d’un Notebook via Nbviewer[^9] et Binder[^10] permettent de visualiser le Notebook.
+- Communauté d’utilisateurs qui construit des extensions, des applications et qui aide les nouveaux utilisateurs.
+- Mise en place d'évènements communs (Jupyter Community Workshops[^11], JupyterDays[^12] et JupyterCon[^13]). |
+
+## **3. Inconvénients**
+
+| Nécessite des connaissances de base |
+| :- |
+- Nécessite de connaître un langage informatique (Python ou autre).
+- Une philosophie qui n’est pas nécessairement intuitive dans l’exécution du code.
+- Un IDE (environnement de développement intégré) est un ensemble d’outils qui permet d’augmenter la productivité des programmeurs qui créent des logiciels. Un IDE comporte un éditeur de texte permettant de faire de la programmation. Les exemples d’IDE sont nombreux : Visual Studio Code, CodeLite, NetBeans, PytCharm.
+- Moins de support que les IDE[^14]. Par exemple : le Notebook ne dit pas s’il y a une variable non-utilisée.
+- Face à cet outil très personnalisable : difficulté de savoir quels plugins ou extensions exploiter. |
+
+| Problème de reproductibilité |
+| :- |
+- Les Notebooks sont particulièrement compliqués à reproduire pour les débutants car ils nécessitent de réécrire le code (sur 1 million de Notebooks sur Github, seulement 4% sont utilisables en état).
+- Impossibilité de reproduire le Notebook dans certains cas : le code peut être obsolète. Il faut aussi retrouver la bonne version des bibliothèques utilisées.
+- Le code peut être exécuté de manière non linéaire, provoquant des « hidden states ».
+- Le lien entre les données et le Notebook n'est pas évident : l’accès aux fichiers est l'une des causes courantes pour lesquelles les Notebooks ne sont pas reproductibles. Il faut changer le chemin du fichier directement dans le code du Notebook. |
+
+| Outil qui conduit à prendre de mauvaises habitudes pour écrire du code |
+| :- |
+
+- Compliqué de passer de Visual Studio Code à Jupyter Notebook pour un débutant.
+- Les tests (vérification du bon fonctionnement du code) sont peu pratiqués[^15] : il est compliqué de faire des tests pour un Jupyter Notebook.
+- Favorise des pratiques discutables dans le nommage des fichiers et dans la version et la modularisation du code.
+- Pas de règles homogènes sur l’écriture des Notebooks. Par exemple, moins de commentaires à la fin des Notebooks : la plupart des Notebooks ont une cellule d’introduction mais presque aucun n'a de cellules de conclusion. |
+
+| Une diversité de solutions concurrentes de carnets interactifs ne facilitant pas le choix  |
+| :- |
+
+- Un Linter est un outil d’analyse de code qui permet de détecter les erreurs et les problèmes de syntaxe.
+- Le « debugging » est une pratique qui consiste à trouver et à corriger les erreurs dans le code. Les programmeurs étudient le code pour déterminer la raison des erreurs. Le but est d’exécuter le code et de le vérifier étape par étape pour résoudre le problème. Les tests aident pour le « debugging ».
+- Les différents IDE (PyCharm, Spyder, Visual Studio Code) permettent de contrôler le code avec des linters[^16], de faire du contrôle de version et du debugging[^17].
+- « Cloud based » signifie que les données ne sont pas stockées sur un serveur local ou
 
 La plupart des problèmes adressés peuvent être résolu grâce à des extensions, des logiciels à utiliser en complément de Jupyter Notebook : 
 
 - Une des critiques adressées est le fait qu’il n’y ait pas d’auto complétion du code ce qui peut poser des problèmes à des utilisateurs débutants : l’extension Hinterland permet d’activer l’auto complétion du code dans les Jupyter Notebooks.
 
-![](Aspose.Words.e94bf946-1998-46ad-bdc9-19bd330baa79.003.png)
+:::{figure} ./hinterland.png
+:name: Hinterland
+ Exemple de l'utilisation de Hinterland.
+:::
 
 - Une autre critique est le fait que les Jupyter Notebooks ne sont pas faciles à utiliser pour des utilisateurs débutants. Le « Snippets » menu permet d’obtenir du code prêt à être utiliser avec différentes librairies et pour différents usages. Cela permet à des utilisateurs débutants de ne pas avoir à regarder la documentation pour avoir la syntaxe du code.
 
-![](Aspose.Words.e94bf946-1998-46ad-bdc9-19bd330baa79.004.png)
+:::{figure} ./snippets.png
+:name: Snippets
+ Exemple de l'utilisation de snippets.
+:::
 
 Prérequis : Malgré le fait qu’il y ait beaucoup d’extensions qui facilitent l’usage des Jupyter Notebooks, il existe des connaissances minimales à avoir pour les utiliser :
 
@@ -97,15 +165,18 @@ La littérature permet d’identifier quelques bonnes pratiques à avoir pour co
 - Faire un « pipeline » : créer un modèle : le but est de faire un Notebook qui soit réutilisable en changeant les données et les paramètres.
 - Faire que le Notebook soit le plus lisible possible avec une présentation claire : 
 
-**Exemple d’un Notebook de qualité ci-dessous :**
+## **4. Exemple d’un Notebook de qualité ci-dessous**
 
-![](Aspose.Words.e94bf946-1998-46ad-bdc9-19bd330baa79.005.png)
+:::{figure} ./notebook.png
+:name: Notebook
+Exemple de l'utilisation d'un Jupyter Notebook
+:::
 
 Ce Notebook est de très bonne qualité.  Sont présents le titre, la date de création et les auteurs. Il contient une présentation des données utilisées ainsi qu’une table des matières. L’article qui discute de ce code est référencé. La démarche est très claire : un titre est présent, le code a des commentaires et les cellules au format texte permettent de suivre la réflexion. Le Notebook présenté est disponible au format Web ce qui est utile pour l’utilisateur n’ayant pas installé Anaconda sur son ordinateur.
 
 - Exporter le Notebook en fichier PDF et mettre ce fichier PDF dans le Github. Cela permet à des personnes n’ayant pas installé Anaconda de voir votre travail.
 
-Conclusion :
+## **5. Conclusion**
 
 La programmation en science, notamment avec Python, et les nouveaux outils comme Jupyter Notebook sont importants pour les sciences humaines et sociales. Une partie des critiques adressées aux Notebooks ne sont pas dus au « médium » mais plutôt à la manière dont les personnes s’en servent. La plupart des problèmes adressés dans cet article ont des solutions : les Jupyter Notebooks sont très customisables selon les besoins de ses utilisateurs. Les Jupyter Notebooks peuvent être une bonne solution dans les situations suivantes :
 
@@ -121,7 +192,7 @@ Avec le développement des nouvelles technologies dans le champ de la recherche,
 
 Nous n’attendons plus que vous !
 
-**Liste de ressources utiles pour commencer :**
+## **6. Ressources**
 
 https://www.python.org/downloads/
 

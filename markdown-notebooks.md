@@ -6,7 +6,11 @@ authors:
   - name: "POPINEAU Maxime"
     affiliations: "Digit_Hum"
     email: "maxime.popineau@etu.univ-tours.fr"
+license: CC-BY-4.0
 keywords: "Jupyter Notebooks, API, tutoriel"
+venue:
+  title: Lien vers la documentation de l'API de HAL.
+  url: "https://api.archives-ouvertes.fr/docs/search"
 
 ---
 
@@ -27,6 +31,18 @@ Certains caractères, tels que l'espace ou les guillemets doubles, doivent être
 L'utilisation d'une API permet d'interroger les données en utilisant des paramètres, par exemple pour connaître le nombre d'articles publiés dans HAL en 2014.
 
 Dans ce notebook, nous allons voir comment utiliser l'API des archives ouvertes ainsi que les bibliothèques pandas et matplotlib.
+
+:::{attention}Compétences requises en Python.
+Ce Jupyter Notebook nécessite d'avoir des compétences en Python pour le réaliser. Il existe néanmoins une manière pour les non programmeurs d'interagir avec l'API de HAL ci-dessous :
+
+:::
+
+:::{note}Pour les personnes qui ne connaissent pas Python.
+Les IpyWidgets permettent à des utilisateurs qui ne savent pas coder d'utiliser l'API des HAL avec des paramètres comme le type de documents ou les années.
+:::
+
+
+
 
 ## <span style="font-size: 14pt"> Objectifs de ce Jupyter Notebook.</span>
 
@@ -52,9 +68,15 @@ Le document permet d'acquérir des compétences variées comme :
 
 Dans cette section, nous allons importer les librairies nécessaires à notre analyse.
 
-1. La librairie requests et json permet de faire les requêtes dans l'API de HAL.
-2. Pandas est utilisé pour faire de l'analyse de données. La librarie fournit des fonctions pour créer, manipuler et analyser les DataFrames.
-3. Matplotlib permet de faire des graphiques et de visualiser les données.
+:::{important}Le rôle des libraries
+
+La librairie requests et json permet de faire les requêtes dans l'API de HAL.
+
+Pandas est utilisé pour faire de l'analyse de données. La librarie fournit des fonctions pour créer, manipuler et analyser les DataFrames.
+
+Matplotlib permet de faire des graphiques et de visualiser les données.
+
+:::
 
 
 ```python
@@ -65,9 +87,17 @@ import matplotlib.pyplot as plt
 
 ## Section 1 : Analyse du nombre de publications concernant Python et les Jupyter Notebooks dans l'API de HAL.
 
+Nous pouvons faire une analyse stastique du nombre de publications dans la base de données HAL et comparer avec l'utilisation de Python et des Jupyter Notebooks.
+
 ## <span style="font-size: 12pt">1.0 : Utilisation d'une fonction qui retourne le nombre d'articles par année en fonction d'une recherche.</span>
 
+
+:::{tip}Bonne pratique
+
 Les fonctions permettent de rendre le code plus lisible et de réduire la duplication du code.
+
+:::
+
 
 Pour faire une requête dans l'API, il est nécessaire de lire la documentation du site HAL disponible à cette adresse : https://api.archives-ouvertes.fr/docs/search
 
@@ -172,11 +202,13 @@ plt.show()
 ![png](output_15_1.png)
     
 
-
+:::{note}
 Matplotlib est une librairie qui permet de faire ce graphique pour visualiser l'augmentation des articles sur Python dans la base de données HAL. 
+:::
+
 L'année 2023 marquera probablement une baisse dans le nombre d'articles publiés sur Python dans la base de données de HAL car 5 mois se sont déjà écoulés et il n'y a même pas 1000 articles.
 
-### <span style="font-size: 12pt"> 1.2 : Obtenir les résultats pour les Jupyter Notebooks.</span>
+## <span style="font-size: 12pt"> 1.2 : Obtenir les résultats pour les Jupyter Notebooks.</span>
 
 Nous appelons la même fonction que dans le 1.0
 
@@ -675,132 +707,5 @@ Notre Jupyter Notebook est fini : en espérant qu'il vous a plu et qu'il était 
 
 Si vous avez des questions ou des retours, merci de m'écrire à mon adresse email universitaire : maxime.popineau@etu.univ-tours.fr.
 
-Les IpyWidgets permettent à des utilisateurs qui ne savent pas coder d'utiliser l'API des HAL avec des paramètres comme le type de documents ou les années.
 
-
-```python
-import requests
-import ipywidgets as widgets
-import matplotlib.pyplot as plt
-import pandas as pd
-from IPython.display import display
-import json
-
-# Fonction pour effectuer la requête sur l'API HAL
-def make_hal_request(query, year, doc_type):
-    url = f"https://api.archives-ouvertes.fr/search/?q={query}&fq=docType_s:{doc_type}&fq=producedDateY_i:{year}&wt=json"
-    response = requests.get(url)
-    try:
-        data = response.json()
-        return data
-    except json.JSONDecodeError:
-        print('Erreur lors de l\'analyse de la réponse JSON de l\'API.')
-        return None
-
-# Options de requête
-doc_types = ['ART', 'COMM', 'OUV', 'THESE']
-
-# Création des widgets
-query_widget = widgets.Textarea(value='', placeholder='Saisissez votre requête ici', description='Requête:')
-year_widget = widgets.Dropdown(options=['Toutes les années'] + list(range(2010, 2023)), description='Année:')
-doc_type_widget = widgets.Dropdown(options=['Tous les types'] + doc_types, description='Type de document:')
-display_type_widget = widgets.RadioButtons(options=['Tableau', 'Graphique'], description='Affichage:')
-button = widgets.Button(description='Effectuer la requête')
-
-# Fonction de rappel du bouton
-def on_button_click(b):
-    query = query_widget.value.strip()
-    year = year_widget.value
-    doc_type = doc_type_widget.value
-    
-    # Vérification de la validité de la requête
-    if not query:
-        print('Veuillez saisir une requête valide.')
-        return
-    
-    # Si l'option "Toutes les années" est sélectionnée, on utilise un caractère générique '*' pour la requête
-    if year == 'Toutes les années':
-        year = '*'
-    
-    # Si l'option "Tous les types" est sélectionnée, on utilise un caractère générique '*' pour le type de document
-    if doc_type == 'Tous les types':
-        doc_type = '*'
-    
-    # Appel de la fonction pour effectuer la requête
-    data = make_hal_request(query, year, doc_type)
-    
-    # Vérification de la réponse de l'API
-    if data is None:
-        return
-    
-    # Traitement des résultats
-    num_results = data['response']['numFound']
-    print(f"Nombre total de documents : {num_results}")
-    
-    # Exemple d'affichage sous forme de tableau
-    if display_type_widget.value == 'Tableau':
-        if year == '*':
-            if doc_type == '*':
-                years = list(range(2010, 2023))
-                counts = []
-                for year in years:
-                    data = make_hal_request(query, year, doc_type)
-                    if data is not None:
-                        counts.append(data['response']['numFound'])
-                
-                df = pd.DataFrame({'Année': years, 'Nombre de documents': counts})
-                display(df)
-            else:
-                print('Veuillez sélectionner "Toutes les années" pour afficher les résultats sous forme de tableau.')
-        else:
-            print('Veuillez sélectionner "Toutes les années" pour afficher les résultats sous forme de tableau.')
-    
-    # Exemple d'affichage sous forme de graphique
-    elif display_type_widget.value == 'Graphique':
-        if year == '*':
-            if doc_type == '*':
-                years = list(range(2010, 2023))
-                counts = []
-                for year in years:
-                    data = make_hal_request(query, year, doc_type)
-                    if data is not None:
-                        counts.append(data['response']['numFound'])
-                
-                plt.figure(figsize=(10, 6))
-                plt.plot(years, counts, marker='o')
-                plt.xlabel('Année')
-                plt.ylabel("Nombre de documents")
-                plt.title('Nombre de documents publiés par année')
-                plt.show()
-            else:
-                print('Veuillez sélectionner "Toutes les années" pour afficher les résultats sous forme de graphique.')
-        else:
-            print('Veuillez sélectionner "Toutes les années" pour afficher les résultats sous forme de graphique.')
-
-# Lier la fonction de rappel au bouton
-button.on_click(on_button_click)
-
-# Afficher les widgets
-display(query_widget, year_widget, doc_type_widget, display_type_widget, button)
-
-```
-
-
-    Textarea(value='', description='Requête:', placeholder='Saisissez votre requête ici')
-
-
-
-    Dropdown(description='Année:', options=('Toutes les années', 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2…
-
-
-
-    Dropdown(description='Type de document:', options=('Tous les types', 'ART', 'COMM', 'OUV', 'THESE'), value='To…
-
-
-
-    RadioButtons(description='Affichage:', options=('Tableau', 'Graphique'), value='Tableau')
-
-
-
-    Button(description='Effectuer la requête', style=ButtonStyle())
 
