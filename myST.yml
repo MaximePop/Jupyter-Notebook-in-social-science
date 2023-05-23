@@ -1,0 +1,29 @@
+# See docs at: https://myst-tools.org/docs/mystjs/frontmatter
+version: 1
+project:
+  # title:
+  # description:
+  keywords: []
+  authors: []
+  github : https://github.com/MaximePop/Jupyter-Notebook-in-social-science
+  # github:
+  # bibliography: []
+site:
+  template: book-theme
+  # title:
+  # logo:
+nav: []
+actions:
+  - title: Learn More
+    url: https://myst-tools.org/docs/mystjs
+domains: []
+license: CC-BY-4.0
+open_access: true
+repository:
+  url: https://github.com/{MaximePop/Jupyter-Notebook-in-social-science}
+html:
+use_repository_button: true
+use_issues_button: true
+use_edit_page_button: true
+launch_buttons:
+  binderhub_url: "https://mybinder.org/v2/gh/MaximePop/testJupyter/HEAD"

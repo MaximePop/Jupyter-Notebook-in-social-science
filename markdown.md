@@ -12,10 +12,8 @@ date: "2023-05-23"
 venue:
   title: Lien vers le répertoire Github
   url: "https://github.com/MaximePop/Jupyter-Notebook-in-social-science"
-exports:
-  - format: pdf
-    template: arxiv_two_column
-    output: exports/my-document.pdf
+launch_buttons:
+  binderhub_url: "https://mybinder.org/v2/gh/MaximePop/testJupyter/HEAD"
 
 ---
 | ![Aspose.Words](Aspose.Words.e94bf946-1998-46ad-bdc9-19bd330baa79.001.png) | ![digit_hum.png](digit_hum.png) | ![logo.png](logo.png) |

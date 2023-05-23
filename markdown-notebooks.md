@@ -11,6 +11,11 @@ keywords: "Jupyter Notebooks, API, tutoriel"
 venue:
   title: Lien vers la documentation de l'API de HAL.
   url: "https://api.archives-ouvertes.fr/docs/search"
+open_access: true
+repository:
+  url: https://github.com/{MaximePop/Jupyter-Notebook-in-social-science}
+html:
+  use_issues_button: true
 
 ---
 
