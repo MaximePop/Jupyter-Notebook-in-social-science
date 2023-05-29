@@ -1,0 +1,36 @@
+version: 1
+project:
+  title: Les Jupyter Notebooks en SHS
+  description: Projet fait dans le cadre de l'initiative Digit_Hum.
+  keywords: 
+    - Jupyter Notebooks
+    - SHS
+    - HAL
+    - API
+  tags: Jupyter Notebooks, SHS, HAL, API
+  authors: []
+site:
+  template: book-theme
+  nav: []
+  actions:
+    - title: Github
+      url: https://github.com/MaximePop/Jupyter-Notebook-in-social-science
+    - title: Twitter
+      url: https://twitter.com/POPINEAUMaxime
+    - title: Curvenote
+      url: https://curvenote.com/
+    - title: Digit_Hum
+      url: https://digithum.huma-num.fr/
+  domains: 
+  - https://maximepopineau-project.curve.space/
+  project:
+    license: CC-BY-4.0
+    open_access: true
+    github: MaximePop/testJupyter
+    thebe: true
+    binder:
+      repo: MaximePop/testJupyter
+    launch_buttons:
+      binderhub_url: "https://hub.ovh2.mybinder.org/user/maximepop-testjupyter-alr2ukym/lab/tree/notebooks.ipynb"
+project.binder:
+

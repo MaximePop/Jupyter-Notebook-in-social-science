@@ -13,8 +13,7 @@ venue:
   title: Lien vers le répertoire Github
   url: "https://github.com/MaximePop/Jupyter-Notebook-in-social-science"
 launch_buttons:
-  binderhub_url: "https://hub.ovh2.mybinder.org/user/maximepop-testjupyter-alr2ukym/lab/tree/notebooks.ipynb"
-
+  binderhub_url: "https://mybinder.org/v2/gh/MaximePop/testJupyter/HEAD"
 
 ---
 
